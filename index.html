@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+   <style>
+  select option {
+    background-color: #1a1a26;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body class="min-h-screen place-items-center p-4 font-[Inter] text-slate-100 bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e]">
+
+  <div class="w-full max-w-sm p-6 rounded-3xl bg-black/40 backdrop-blur-md border border-whitel10 shadow-2xl">
+    <h2 class="text-2xl font-semibold text-center mb-5">Currency Converter</h2>
+
+    <!-- Amount Input -->
+    <div class="mb-4">
+      <label for="amount" class="block text-sm text-slate-400 mb-1.5">Enter Amount:</label>
+      <input type="number" id="amount" value="1" min="0" step="any" class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/10
+             text-base text-white outline-none focus:border-violet-400 transition" />
+    </div>
+
+    <!-- From Currency Dropdown -->
+    <div class="mb-2">
+      <label for="from-currency" class="block text-sm text-slate-400 mt-4 mb-1.5">From:</label>
+      <select id="from-currency" class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/10
+             text-base text-white outline-none focus:border-violet-400 transition">
+        <!-- JS will populate options -->
+      </select>
+    </div>
+
+    <!-- Swap Button (Centered cleanly between From and To) -->
+    <div class="flex justify-center my-3">
+      <button id="swap-btn" type="button" class="block mx-auto my-3 px-4 py-1.5 rounded-full text-sm bg-white/10
+             border border-white/10 hover:bg-white/20 active:scale-95 transition">
+          ⇅ Swap
+      </button>
+    </div>
+
+    <!-- To Currency Dropdown -->
+    <div class="mb-4">
+      <label for="to-currency" class="block text-sm text-slate-400 mb-1.5">To:</label>
+      <select id="to-currency" class="w-full px-3 py-2.5 rounded-xl bg-white/5 border border-white/10
+             text-base text-white outline-none focus:border-violet-400 transition">
+        <!-- JS will populate options -->
+      </select>
+    </div>
+
+    <!-- Convert Button -->
+    <button id="convert-btn" type="button" class="w-full mt-5 py-3 rounded-xl font-semibold text-white bg-violet-400
+             hover:bg-violet-500 active:scale-[.98] transition">
+      Convert
+    </button>
+
+    <!-- Result Area -->
+    <div id="result" class="mt-5 p-4 rounded-xl text-center bg-white/5 border border-white/10">
+      <p id="result" class="text-xl font-semibold text-violet-300">
+      <h3 class="text-xs text-slate-400 mt-1">Result will appear here</h3>
+    </div>
+
+  </div> 
+  <script src="/script.js"></script>
+</body>
+</html>
